@@ -3,3 +3,4 @@
 - update rsync/rsync-downloader.sh
 - change version rsync/rsync-downloader.sh from v1.0 to v1.1
 - Add new script mysql/full-mysql-backups.sh
+- Fixing rsync/rsync-downloader.sh

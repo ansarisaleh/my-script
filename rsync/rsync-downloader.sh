@@ -54,7 +54,7 @@ mkdir -p $DEST_BACKUPS
 # Starting rsync
 echo "" >> $PATH_LOG/$LOG_NAME.log
 echo "----------- Starting of rsync -----------" >> $PATH_LOG/$LOG_NAME.log
-$CMD $OPTION -e "ssh -p 1111" $USERNAME@$IP:$SRC_BACKUPS $TMP_BACKUPS
+$CMD $OPTION -e "ssh -p 22" $USERNAME@$IP:$SRC_BACKUPS $TMP_BACKUPS
 echo $NOW "Starting create archive file . . ." >> $PATH_LOG/$LOG_NAME.log
 echo $NOW "Creating " $DEST_BACKUPS$BACKUPS_NAME.tar.bz2 >> $PATH_LOG/$LOG_NAME.log
 cd $TMP_BACKUPS
