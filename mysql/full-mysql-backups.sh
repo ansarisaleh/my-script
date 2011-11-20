@@ -34,7 +34,7 @@ DIR=`dirname $0`
 TMP_BACKUPS=$DIR/tmp/`basename $0`
 
 # Log
-PATH_LOG=$DIR/logs/
+PATH_LOG=$DIR/logs/`basename $0`
 LOG_NAME=$(date +"%m-%d-%Y")
 NOW=$(date +"%m/%d/%Y %T")
 
@@ -59,7 +59,7 @@ done
 cd $TMP_BACKUPS
 echo $NOW "PWD to tmp directory -- " `pwd` >> $PATH_LOG/$LOG_NAME.log
 echo $NOW "Create archive ..." >> $PATH_LOG/$LOG_NAME.log
-tar -cjf $DEST/$BACKUPS_NAME.tar.bz2 *
+tar -cjf $DEST$BACKUPS_NAME.tar.bz2 *
 echo $NOW "Create archive file done !" >> $PATH_LOG/$LOG_NAME.log
 echo $NOW "Remove temporary file ..." >> $PATH_LOG/$LOG_NAME.log
 rm -rf *.sql
