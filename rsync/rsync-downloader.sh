@@ -6,7 +6,7 @@
 # simple rsync script to backups from remote to local with ssh-keygen
 # Author  : Fanani M. Ihsan
 # Blog    : http://fanani.net
-# Version : 1.0
+# Version : 1.1
 
 # --------
 # HOWTO
@@ -43,7 +43,7 @@ LOG_NAME=$(date +"%m-%d-%Y")
 BACKUPS_NAME=$(date +"%m-%d-%Y")
 NOW=$(date +"%m/%d/%Y %T")
 CMD=`which rsync`
-OPTION="-ahr -pog --log-file="$PATH_LOG$LOG_NAME.log
+OPTION="-ahr -pog --delete --log-file="$PATH_LOG$LOG_NAME.log
 DIR=`dirname $0`
 TMP_BACKUPS=$DIR/tmp/`basename $0`
 echo "" >> $PATH_LOG$LOG_NAME.log
