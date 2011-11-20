@@ -40,9 +40,9 @@ USERNAME=<your_username>
 DIR=`dirname $0`
 PATH_LOG=$DIR/logs/`basename $0`
 TMP_BACKUPS=$DIR/tmp/`basename $0`
-LOG_NAME=$(date +"%m-%d-%Y")
-BACKUPS_NAME=$(date +"%m-%d-%Y")
-NOW=$(date +"%m/%d/%Y %T")
+LOG_NAME=$(date +"%Y-%m-%d")
+BACKUPS_NAME=$(date +"%Y-%m-%d")
+NOW=$(date +"%Y/%m/%d %T")
 CMD=`which rsync`
 OPTION="-ahr -pog --delete --log-file="$PATH_LOG/$LOG_NAME.log
 
