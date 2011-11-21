@@ -8,12 +8,27 @@
 # Blog    : http://fanani.net
 # Version : 2.0
 
+# --------
+# HOWTO
+# --------
+# 1. Setting configuration
+# 2. Run the script
+#    $ sh full-mysql-backups.sh
+
 # Edit configuration bellow
 # Directory setting must be end with "/"
 MYSQL_USER=mysql_user
 MYSQL_PASS=mysql_password
 MYSQL_HOST=127.0.0.1
 BACKUPS_DEST=/path/to/backups/
+
+# Ignore some database
+# Input some databse for ignore backups
+# Sparate with space
+IGNORE="information_schema mysql"
+
+# Global Variable
+# Don't edit this configuration bellow
 
 # Binary file path
 MYSQL=`which mysql`
@@ -26,9 +41,6 @@ BACKUPS_NAME=$(date +"%Y-%m-%d")
 
 # Command option
 DBS=`$MYSQL -h $MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS -Bse 'SHOW DATABASES'`
-
-# Ignore some database
-IGNORE="information_schema mysql"
 
 # Script location
 DIR=`dirname $0`
@@ -46,6 +58,7 @@ mkdir -p $TMP_BACKUPS
 mkdir -p $PATH_LOG
 mkdir -p $BACKUPS_DEST
 
+# Starting backups
 echo "" >> $PATH_LOG/$LOG_NAME.log
 echo "----------- Starting backups -----------" >> $PATH_LOG/$LOG_NAME.log
 
