@@ -6,9 +6,10 @@
 # This Is script for full backups mysql database
 # Author  : Fanani M. Ihsan
 # Blog    : http://fanani.net
-# Version : 1.0
+# Version : 2.0
 
 # Edit configuration bellow
+# Directory setting must be end with "/"
 MYSQL_USER=mysql_user
 MYSQL_PASS=mysql_password
 MYSQL_HOST=127.0.0.1

@@ -4,3 +4,7 @@
 - change version rsync/rsync-downloader.sh from v1.0 to v1.1
 - Add new script mysql/full-mysql-backups.sh
 - Fixing rsync/rsync-downloader.sh
+
+11/20/2011
+- Update version mysql/full-mysql-backups.sh from v1.0 to v2.0
+- Add fitur ignore some database mysql/full-mysql-backups.sh
