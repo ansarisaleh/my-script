@@ -54,6 +54,7 @@ LOG_NAME=$(date +"%Y-%m-%d")
 NOW=$(date +"%Y/%m/%d %T")
 
 # mkdir temporary files, log path , and destination backups
+cd ~
 mkdir -p $TMP_BACKUPS
 mkdir -p $PATH_LOG
 mkdir -p $BACKUPS_DEST
